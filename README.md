@@ -63,7 +63,7 @@ If the `ligolo-ng` command is not recognized, follow these steps:
 2. Copy the binaries to `~/.sliver-client/aliases/ligolo-ng`.
 3. Load the alias in Sliver:
     ```sh
-    aliases load /home/<USERNAME>/.sliver-client/aliases/ligolo-ng/alias.json
+    sliver > aliases load /home/<USERNAME>/.sliver-client/aliases/ligolo-ng/alias.json
     ```
 
 If you encounter a `Connection error: keepalive timeout`, use the compiled proxy client located in `~/.sliver-client/aliases/ligolo-ng`. If the issue persists, compile a new proxy client.
