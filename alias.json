@@ -1,0 +1,35 @@
+{
+  "name": "Ligolo-ng",
+  "version": "1.0.0",
+  "command_name": "ligolo-ng",
+  "original_author": "nicocha30",
+  "repo_url": "https://github.com/nicocha30/ligolo-ng",
+  "help": "Ligolo-ng is a simple, lightweight, and fast reverse proxy for pentesters. Implemented by @Fagan Afandiyev",
+  "entrypoint": "Main",
+  "allow_args": true,
+  "default_args": "",
+  "is_reflective": false,
+  "is_assembly": false,
+  "files": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "path": "ligolo-ng-agent-linux-amd64"
+    },
+    {
+      "os": "linux",
+      "arch": "386",
+      "path": "ligolo-ng-agent-linux-386"
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "path": "ligolo-ng-agent-windows-amd64.exe"
+    },
+    {
+      "os": "windows",
+      "arch": "386",
+      "path": "ligolo-ng-agent-windows-386.exe"
+    }
+  ]
+}
