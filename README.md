@@ -24,6 +24,8 @@ We would like to thank the following people for their support in the development
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [How to use with Sliver](#how-to-use-with-sliver)
+- [Debugging Sliver](#debugging-sliver)
 - [Introduction](#introduction)
 - [Features](#features)
 - [Demo](#demo)
@@ -37,6 +39,34 @@ We would like to thank the following people for their support in the development
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## How to use with Sliver
+
+To integrate Ligolo-ng with Sliver, follow these steps:
+
+1. Build the Ligolo-ng agent and proxy using the provided Makefile:
+    ```sh
+    make
+    ```
+2. The built files will be automatically copied to `~/.sliver-client/aliases/ligolo-ng`.
+3. Restart the Sliver client.
+4. Use the alias in Sliver:
+    ```sh
+    sliver > ligolo-ng -- -connect 192.168.0.2:443 -ignore-cert
+    ```
+
+## Debugging Sliver
+
+If the `ligolo-ng` command is not recognized, follow these steps:
+
+1. Ensure the binaries are compiled.
+2. Copy the binaries to `~/.sliver-client/aliases/ligolo-ng`.
+3. Load the alias in Sliver:
+    ```sh
+    aliases load /home/<USERNAME>/.sliver-client/aliases/ligolo-ng/alias.json
+    ```
+
+If you encounter a `Connection error: keepalive timeout`, use the compiled proxy client located in `~/.sliver-client/aliases/ligolo-ng`. If the issue persists, compile a new proxy client.
 
 ## Introduction
 
